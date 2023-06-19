@@ -78,7 +78,7 @@ window.addEventListener("DOMContentLoaded", function()
                 let librarySection = document.querySelector(".library");
                 librarySection.innerHTML = "";
                 displayBooks(bookList, bookList.length, "../");
-            })
+            });
         }
     }
     createFilters();
