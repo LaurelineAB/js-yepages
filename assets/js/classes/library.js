@@ -26,7 +26,7 @@ class Library
     {
         for (let book of bookList)
         {
-            let newBook = new Book(book.title, book.author, book.category, book.resume, book.cover);
+            let newBook = new Book(book.title, book.author, book.category, book.summary, book.cover);
             this.#shelf.push(newBook);
         };
     };
@@ -73,14 +73,29 @@ class Library
     
     findBookByCategory(category)
     {
+        let bookList = [];
         for (let i=0; i<this.#shelf.length; i++)
         {
             if (this.#shelf[i].category === category)
             {
-                return this.#shelf[i];
+                bookList.push(this.#shelf[i]);
             };
         };
-    }
+        return bookList;
+    };
+    
+    getCategories()
+    {
+        let categories = [];
+        for (let i=0; i<this.#shelf.length; i++)
+        {
+            if (!categories.includes(this.#shelf[i].category))
+            {
+                categories.push(this.#shelf[i].category);
+            };
+        };
+        return categories;
+    };
 
 }
 

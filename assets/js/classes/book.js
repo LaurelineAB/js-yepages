@@ -3,15 +3,15 @@ class Book
     #title;
     #author;
     #category;
-    #resume;
+    #summary;
     #cover;
     
-    constructor (title, author, category, resume, cover)
+    constructor (title, author, category, summary, cover)
     {
         this.#title = title;
         this.#author = author;
         this.#category = category;
-        this.#resume = resume;
+        this.#summary = summary;
         this.#cover = cover;
     }
     
@@ -31,9 +31,9 @@ class Book
         return this.#category;
     }
     
-    get resume()
+    get summary()
     {
-        return this.#resume;
+        return this.#summary;
     }
     
     get cover()
@@ -57,9 +57,9 @@ class Book
         this.#category = newCat;
     }
     
-    set resume (newResume)
+    set summary (newsummary)
     {
-        this.#resume = newResume;
+        this.#summary = newsummary;
     }
     
     set cover (newCover)
