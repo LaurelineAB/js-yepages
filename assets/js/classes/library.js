@@ -1,3 +1,5 @@
+import {Book} from "./book.js";
+
 class Library
 {
     #shelf;
@@ -22,7 +24,6 @@ class Library
     //METHODES
     load(bookList)
     {
-        import {Book} from "./book.js";
         for (let book of bookList)
         {
             let newBook = new Book(book.title, book.author, book.category, book.resume, book.cover);
@@ -37,7 +38,7 @@ class Library
     
     removeBook(book)
     {
-        for (let i=0, i<this.#shelf.length, i++)
+        for (let i=0; i<this.#shelf.length; i++)
         {
             if (this.#shelf[i].title === book.title && this.#shelf[i].author === book.author)
             {
@@ -48,7 +49,7 @@ class Library
     
     findBookByTitle(title)
     {
-        for (let i=0, i<this.#shelf.length, i++)
+        for (let i=0; i<this.#shelf.length; i++)
         {
             if (this.#shelf[i].title === title)
             {
@@ -60,7 +61,7 @@ class Library
     findBookByAuthor(author)
     {
         let bookList = [];
-        for (let i=0, i<this.#shelf.length, i++)
+        for (let i=0; i<this.#shelf.length; i++)
         {
             if (this.#shelf[i].author === author)
             {
@@ -72,7 +73,7 @@ class Library
     
     findBookByCategory(category)
     {
-        for (let i=0, i<this.#shelf.length, i++)
+        for (let i=0; i<this.#shelf.length; i++)
         {
             if (this.#shelf[i].category === category)
             {

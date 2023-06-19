@@ -5,35 +5,98 @@ let books =
         author: "J.K. Rowling",
         category: "Fantasy jeunesse",
         resume: "",
-        cover: "../images/hp1.jpg"
+        cover: "assets/images/hp1.jpg"
     },
     {
         title: "Cartographie des nuages",
         author: "David Mitchell",
         category: "Science-fiction adulte",
         resume: "",
-        cover:"../images/Cloud_atlas.jpg"
+        cover:"assets/images/Cloud_atlas.jpg"
     },
     {
         title: "La Communauté de l'anneau",
         author: "J.R.R. Tolkien",
         category: "Fantasy adulte",
         resume: "",
-        cover:"../images/lotr.jpg"
+        cover:"assets/images/lotr.jpg"
     },
     {
         title: "Truth of the divine",
         author: "Lindsay Ellis",
         category: "Science-fiction adulte",
         resume: "",
-        cover: "../images/truth-of-the-divine.jpeg"
+        cover: "assets/images/truth-of-the-divine.jpeg"
     },
     {
         title: "La Guerre des Mondes",
         author: "H.G. Wells",
         category: "Science-fiction adulte",
         resume: "",
-        cover:"../images/war-of-the-worlds.jpeg"
+        cover:"assets/images/war-of-the-worlds.jpeg"
+    },
+    {
+        title: "Ensemble c'est tout",
+        author: "Ana Gavalda",
+        category: "Romance Adulte",
+        resume: "",
+        cover:"assets/images/ensemble.jpeg"
+    },
+    {
+        title: "Misery",
+        author: "Stephen King",
+        category: "Horreur Adulte",
+        resume: "",
+        cover:"assets/images/misery.jpg"
+    },
+    {
+        title: "Pars vite et reviens tard",
+        author: "Fred Vargas",
+        category: "POlar Adulte",
+        resume: "",
+        cover:"assets/images/pars-vite.jpg"
+    },
+    {
+        title: "Hunger Games part 1",
+        author: "Suzanne Collins",
+        category: "Science-Fiction Jeunesse",
+        resume: "",
+        cover:"assets/images/hunger-games.jpg"
+    },
+    {
+        title: "Da Vinci Code",
+        author: "Dan Brown",
+        category: "Polar Adulte",
+        resume: "",
+        cover:"assets/images/da-vinci-code.jpg"
+    },
+    {
+        title: "La huitième couleur",
+        author: "Terry Pratchett",
+        category: "Fantasy Adulte",
+        resume: "",
+        cover:"assets/images/8-couleur.jpeg"
+    },
+    {
+        title: "La horde du Contrevent",
+        author: "Alain Damasio",
+        category: "Science-Fiction Adulte",
+        resume: "",
+        cover:"assets/images/horde_hd.jpg"
+    },
+    {
+        title: "Les chroniques martiennes",
+        author: "Ray Bradbury",
+        category: "Science-Fiction Adulte",
+        resume: "",
+        cover:"assets/images/chroniques-martiennes.jpeg"
+    },
+    {
+        title: "Le maître du Haut-Chateau",
+        author: "Philippe K. Dick",
+        category: "Science-Fiction Adulte",
+        resume: "",
+        cover:"assets/images/Le-Maitre-du-Haut-Chateau.jpg"
     }
 ];
 
