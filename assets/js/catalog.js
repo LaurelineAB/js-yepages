@@ -37,11 +37,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  if (window.location.pathname === "/JavaScript/js-yepages/index.html") {
-    displayBooks(library.shelf, 5, "");
-  } else if (window.location.pathname === "/JavaScript/js-yepages/livres/index.html") {
-    displayBooks(library.shelf, library.shelf.length, "../");
-  }
+  displayBooks(library.shelf, library.shelf.length, "../");
 
   function createFilters() {
     let categories = library.getCategories();
@@ -64,40 +60,30 @@ window.addEventListener("DOMContentLoaded", function () {
     let filters = document.querySelectorAll("#filters li a");
     for (let filter of filters) {
       filter.addEventListener("click", function (event) {
-        let clicked = event.target;
-        for (let i = 0; i < filters.length; i++) {
-          filters[i].classList.remove("active");
-        }
-        let category = clicked.textContent;
-        let bookList = library.findBooksByCategory(category);
+        let category = event.target.textContent;
+        let bookList = library.findBookByCategory(category);
+        console.log(bookList);
         let librarySection = document.querySelector(".library");
-        let nb = document.querySelectorAll(".library article");
-        if (nb.length !== bookList.length) {
-          clicked.classList.add("active");
-          librarySection.innerHTML = "";
-          displayBooks(bookList, bookList.length, "../");
-        } else {
-          librarySection.innerHTML = "";
-          displayBooks(library.shelf, library.shelf.length, "../");
-        }
+        librarySection.innerHTML = "";
+        displayBooks(bookList, bookList.length, "../");
       });
     }
   }
 
   function getBookTitle() {
-    let discoverBtn = document.querySelectorAll(".library article button");
+    let discoverBtn = document.getElementsByClassName("discover");
 
-    for (let i = 0; i < discoverBtn.length; i++) {
+    for (let i = 0; i < library.shelf.length; i++) {
       discoverBtn[i].addEventListener("click", function () {
         let bookTitle = library.shelf[i].title;
         sessionStorage.setItem("bookTitle", bookTitle);
-        window.location.assign("https://laurelineagabibrac.sites.3wa.io/JavaScript/js-yepages/livres/details.html");
+        window.location.assign("https://j62k78.csb.app/livres/details.html");
       });
     }
   }
-  getBookTitle();
   createFilters();
   booksByCategory();
+  getBookTitle();
 });
 
 let bookTitle = sessionStorage.getItem("bookTitle");
